@@ -1,4 +1,4 @@
-from lcd1602 import LCD1602  # 导入LCD库
+from lcd1602 import LCD1602  # 导入LCD库（need download into pico)
 from machine import I2C, Pin  # 导入I2C和Pin模块
 from utime import sleep      # 导入sleep函数
 
@@ -13,7 +13,10 @@ d.display()              # 启用LCD显示
 d.clear()
 
 # 显示文本
-d.print("Hello ")  # 第一行显示 "Hello"
-sleep(1)           # 暂停1秒
-d.setCursor(0, 1)  # 光标移动到第二行
-d.print("world ")  # 第二行显示 "world"
+d.print("Hallo ")  # "hello" in the first line
+sleep(1)           # stop 1s
+d.setCursor(0, 1)  # cursor to second line
+d.print("world ")  # "world" in the second line
+
+sleep(1)
+d.clear()
